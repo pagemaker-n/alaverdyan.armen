@@ -1,1 +1,163 @@
 
+<!doctype html>
+<html lang="hy">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#160b10">
+    <meta name="description" content="Արմեն Ալավերդյանի բանաստեղծությունների թվային ընթերցարան։ Որոնեք, թերթեք այբուբենով և պահեք սիրելի բանաստեղծությունները։">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Արմեն Ալավերդյան — բանաստեղծություններ">
+    <meta property="og:description" content="Բանաստեղծությունների թվային ընթերցարան՝ այբուբենով, որոնմամբ և սիրելիներով։">
+    <title>Արմեն Ալավերդյան — բանաստեղծություններ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;500;600&family=Noto+Serif+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="data/poems.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Անցնել հիմնական բովանդակությանը</a>
+
+    <nav class="site-nav" aria-label="Գլխավոր նավարկում">
+      <div class="nav-inner wrap">
+        <a class="brand" href="#top">Արմեն Ալավերդյան</a>
+        <div class="nav-links">
+          <a href="#library">Այբուբեն</a>
+          <a href="#reader">Ընթերցել</a>
+          <a href="#about">Նախագծի մասին</a>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Միացնել բաց թեման" title="Փոխել թեման">◐</button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main">
+      <header class="hero" id="top">
+        <div class="glow glow-one" aria-hidden="true"></div>
+        <div class="glow glow-two" aria-hidden="true"></div>
+        <div class="hero-inner wrap">
+          <div class="hero-copy">
+            <p class="eyebrow">ԲԱՆԱՍՏԵՂԾԱԿԱՆ ԺՈՂՈՎԱԾՈՒ</p>
+            <h1>Արմեն<br><span class="gold-text">Ալավերդյան</span></h1>
+            <div class="ornament" aria-hidden="true"><span>✦</span></div>
+            <p class="hero-lede">Ժամանակի, հայրենիքի ու հիշողության տողեր՝ այբուբենի կարգով, կարդալու և վերընթերցելու համար։</p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#reader">Սկսել ընթերցանությունը</a>
+              <a class="button button-outline" href="#library">Թերթել այբուբենով</a>
+            </div>
+          </div>
+          <div class="book-stage" aria-hidden="true">
+            <div class="stage-sparkles"><span class="sparkle-one">✦</span><span class="sparkle-two">✧</span><span class="sparkle-three">✦</span><span class="sparkle-four">⋆</span><span class="sparkle-five">✧</span><span class="sparkle-six">✦</span><span class="sparkle-seven">⋆</span><span class="sparkle-eight">✧</span></div>
+            <div class="book">
+              <div class="book-pages"></div>
+              <div class="book-cover">
+                <div class="cover-emblem">✦</div>
+                <span class="cover-kicker">ԲԱՆԱՍՏԵՂԾՈՒԹՅՈՒՆՆԵՐ</span>
+                <strong>Արմեն<br>Ալավերդյան</strong>
+                <span class="cover-count"><span data-poem-count>1331</span> բանաստեղծություն</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="stats wrap" aria-label="Ժողովածուի տվյալները">
+        <div class="stat"><strong data-poem-count>1331</strong><span>ԲԱՆԱՍՏԵՂԾՈՒԹՅՈՒՆ</span></div>
+        <div class="stat"><strong class="stat-word">Այբբենական</strong><span>ԿԱՐԳՈՎ</span></div>
+        <div class="stat"><strong>1518</strong><span>ԷՋ ԱՂԲՅՈՒՐՈՒՄ</span></div>
+      </section>
+
+      <section class="quote wrap" aria-label="Մեջբերում">
+        <span class="quote-mark" aria-hidden="true">❝</span>
+        <blockquote>Ժամանակը անվրեպ է այս խաղում, մի օր առաջ, մի օր հետո կամ հիմա</blockquote>
+        <cite>ԱՐՄԵՆ ԱԼԱՎԵՐԴՅԱՆ</cite>
+      </section>
+
+      <section class="section library-section" id="library">
+        <div class="wrap">
+          <header class="section-heading">
+            <p class="eyebrow">ԲՈՎԱՆԴԱԿՈՒԹՅՈՒՆ</p>
+            <h2>Այբուբենի <span class="gold-text">դարպասը</span></h2>
+            <div class="ornament" aria-hidden="true"><span>✦</span></div>
+          </header>
+
+          <div class="search-area">
+            <label class="visually-hidden" for="search-input">Որոնել վերնագրով կամ բանաստեղծության տողով</label>
+            <input id="search-input" class="search-input" type="search" autocomplete="off" placeholder="Որոնել վերնագրով կամ տողով…">
+            <p id="search-status" class="search-status" aria-live="polite"></p>
+          </div>
+          <div class="library-actions">
+            <button class="button button-small button-dark" id="random-button" type="button">Պատահական բանաստեղծություն</button>
+            <button class="button button-small button-quiet" id="favorites-filter" type="button" aria-pressed="false">♡ Սիրելիները <span id="favorites-count">0</span></button>
+          </div>
+          <div class="letter-grid" id="letter-index" aria-label="Ընտրել տառը"></div>
+          <div class="search-results" id="search-results" hidden>
+            <h3 class="results-heading">Որոնման արդյունքները</h3>
+            <div id="results-list" class="results-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reader-section" id="reader">
+        <div class="wrap">
+          <header class="section-heading reader-heading">
+            <p class="eyebrow" id="chapter-label">ԸՆԹԵՐՑԱՐԱՆ</p>
+            <h2>Բացիր <span class="gold-text">գիրքը</span></h2>
+            <div class="ornament" aria-hidden="true"><span>✦</span></div>
+          </header>
+
+          <div class="reader-layout">
+            <aside class="contents-panel" aria-label="Ընտրված բաժնի բանաստեղծությունները">
+              <div class="contents-header">
+                <span class="chapter-initial" id="chapter-initial">Ա</span>
+                <div><p>ԲԱԺԻՆ</p><h3 id="contents-title">Տառ Ա</h3></div>
+              </div>
+              <div class="contents-list" id="contents-list"></div>
+            </aside>
+
+            <article class="poem-paper" aria-live="polite" aria-atomic="true">
+              <div class="paper-topline"><span id="poem-position"></span><span class="paper-flower" aria-hidden="true">❦</span></div>
+              <h3 class="poem-title" id="poem-title">Ընտրեք բանաստեղծություն</h3>
+              <p class="translator" id="translator" hidden></p>
+              <div class="poem-text" id="poem-text">Ընտրեք տառը կամ որոնեք վերնագրով ու բանաստեղծության տողերով։</div>
+              <p class="poem-byline">ԱՐՄԵՆ ԱԼԱՎԵՐԴՅԱՆ</p>
+              <div class="poem-actions">
+                <button class="text-button" id="favorite-button" type="button" aria-pressed="false" disabled>♡ Պահել սիրելիներում</button>
+                <button class="text-button" id="share-button" type="button" disabled>Կիսվել</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="reader-controls" aria-label="Ընթերցման կարգավորումներ">
+            <div class="font-controls"><span>Տառաչափ</span><button id="font-down" type="button" aria-label="Փոքրացնել տառաչափը">A−</button><button id="font-up" type="button" aria-label="Մեծացնել տառաչափը">A+</button></div>
+            <div class="page-controls"><button id="previous-button" type="button" aria-label="Նախորդ բանաստեղծությունը" disabled>← Նախորդը</button><button id="next-button" type="button" aria-label="Հաջորդ բանաստեղծությունը" disabled>Հաջորդը →</button></div>
+          </div>
+          <p id="reader-status" class="reader-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="section features-section" id="about">
+        <div class="wrap">
+          <header class="section-heading">
+            <p class="eyebrow">ԹՎԱՅԻՆ ԸՆԹԵՐՑԱՐԱՆ</p>
+            <h2>Ընթերցանության <span class="gold-text">հնարավորություններ</span></h2>
+            <div class="ornament" aria-hidden="true"><span>✦</span></div>
+          </header>
+          <div class="feature-grid">
+            <article class="feature-card"><span aria-hidden="true">⌕</span><h3>Որոնում</h3><p>Գտեք բանաստեղծություն վերնագրով կամ տողով։</p></article>
+            <article class="feature-card"><span aria-hidden="true">✦</span><h3>Պատահական էջ</h3><p>Բացեք ժողովածուի որևէ բանաստեղծություն։</p></article>
+            <article class="feature-card"><span aria-hidden="true">♡</span><h3>Սիրելիներ</h3><p>Պահեք ձեզ հարազատ տողերը այս սարքում։</p></article>
+            <article class="feature-card"><span aria-hidden="true">↗</span><h3>Կիսվել</h3><p>Ուղարկեք ընտրված բանաստեղծության վերնագիրն ու տողերը։</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© Արմեն Ալավերդյան · Թվային ընթերցարան</p>
+      <a class="facebook-link" href="https://www.facebook.com/armen.alaverdyan63" target="_blank" rel="noopener noreferrer" aria-label="Արմեն Ալավերդյանի Facebook էջը, կբացվի նոր պատուհանում" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.6 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11 10.13 11.88v-8.4H7.08v-3.48h3.05V9.42c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.95.93-1.95 1.88v2.29h3.32l-.53 3.48h-2.79v8.4C19.61 23.07 24 18.09 24 12.07Z"/></svg></a>
+      <a href="#top">Վերադառնալ վերև ↑</a>
+    </footer>
+  </body>
+</html>
