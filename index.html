@@ -309,6 +309,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .feature-card { padding: 25px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); text-align: center; transition: transform .2s ease, box-shadow .2s ease; }
 .feature-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0, 0, 0, .1); }
 .feature-card > span { display: block; margin-bottom: 7px; color: var(--gold); font-size: 29px; }
+.feature-share-icon { display: block; width: 29px; height: 29px; margin: 0 auto 7px; fill: none; stroke: var(--gold); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .feature-card h3 { margin: 0 0 5px; font-size: 17px; font-weight: 600; }
 .feature-card p { margin: 0; color: var(--muted); font: 13px/1.65 var(--sans); }
 .site-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 22px; padding: 24px 18px 30px; border-top: 1px solid rgba(230, 196, 118, .15); color: #c2b18d; background: #12080c; font: 12px var(--sans); text-align: center; }
@@ -354,12 +355,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .letter-button { min-height: 58px; font-size: 25px; }
   .letter-button.other-letter { font-size: 12px; }
   .results-list { grid-template-columns: 1fr; }
-  .reader-layout { min-height: 0; }
-  .contents-panel { padding: 20px 17px; }
+  .reader-layout { min-height: 0; padding: 8px; border-color: #d4af6a; background: linear-gradient(145deg, #76223b, #3a0c19 72%); }
+  .contents-panel { padding: 20px 17px; border-radius: 2px; background: #f3e8ce; }
   .chapter-initial { font-size: 58px; }
-  .poem-paper { min-height: 420px; padding: 24px 20px; }
-  .poem-title { font-size: 25px; }
-  .poem-text { font-size: min(var(--poem-size), 16px); line-height: 1.75; }
+  .poem-paper { min-width: 0; min-height: 420px; padding: 24px clamp(18px, 5vw, 24px); border: 1px solid rgba(122, 84, 40, .22); border-radius: 2px; background: #f3e8ce; overflow: hidden; }
+  .poem-title { max-width: 100%; font-size: 22px; overflow-wrap: anywhere; }
+  .poem-text { max-width: 100%; font-size: min(var(--poem-size), 16px); line-height: 1.75; overflow-wrap: anywhere; }
   .reader-controls { flex-direction: column; align-items: stretch; }
   .font-controls, .page-controls { justify-content: center; }
   .reader-controls button { padding: 7px 11px; }
@@ -503,7 +504,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
             <article class="feature-card"><span aria-hidden="true">⌕</span><h3>Որոնում</h3><p>Գտեք բանաստեղծություն վերնագրով կամ տողով։</p></article>
             <article class="feature-card"><span aria-hidden="true">✦</span><h3>Պատահական էջ</h3><p>Բացեք ժողովածուի որևէ բանաստեղծություն։</p></article>
             <article class="feature-card"><span aria-hidden="true">♡</span><h3>Սիրելիներ</h3><p>Պահեք ձեզ հարազատ տողերը այս սարքում։</p></article>
-            <article class="feature-card"><span aria-hidden="true">↗</span><h3>Կիսվել</h3><p>Ուղարկեք ընտրված բանաստեղծության վերնագիրն ու տողերը։</p></article>
+            <article class="feature-card"><svg class="feature-share-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8.2 10.8 7.6-4.6M8.2 13.2l7.6 4.6"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="5" r="2.5"/><circle cx="18" cy="19" r="2.5"/></svg><h3>Կիսվել</h3><p>Ուղարկեք ընտրված բանաստեղծության վերնագիրն ու տողերը։</p></article>
           </div>
         </div>
       </section>
